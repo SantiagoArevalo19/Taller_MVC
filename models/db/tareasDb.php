@@ -1,45 +1,38 @@
 <?php
-// Ruta: models/db/tareasDb.php
 
 namespace App\models\db;
 
 use mysqli;
-use Exception;
 
-class Connection
+class TareasDb
 {
     private $host = 'localhost';
     private $user = 'root';
-    private $password = '';
-    private $database = 'tareas_db';
+    private $pwd = '';
+    private $name = 'tareas_db';
     private $conex;
 
-    private static $instance = null;
-
-    private function __construct()
+    function __construct()
     {
-        $this->conex = new mysqli($this->host, $this->user, $this->password, $this->database);
-        if ($this->conex->connect_error) {
-            throw new Exception("Error de conexión: " . $this->conex->connect_error);
-        }
+        $this->conex = new mysqli(
+            $this->host,
+            $this->user,
+            $this->pwd,
+            $this->name
+        );
     }
 
-    public static function getInstance()
-    {
-        if (self::$instance === null) {
-            self::$instance = new Connection();
-        }
-        return self::$instance;
-    }
-
-    public function getConnection()
-    {
-        return $this->conex;
-    }
-
-    public function close()
+    function close()
     {
         $this->conex->close();
-        self::$instance = null;
+    }
+
+    function query($sql)
+    {
+        if ($this->conex->connect_error) {
+            echo $this->conex->connect_error;
+            return null;
+        }
+        return $this->conex->query($sql);
     }
 }
