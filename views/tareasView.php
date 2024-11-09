@@ -43,11 +43,9 @@ class TareasViews
                     $rows .= '   <td>';
                 }
                 $rows .= '<form action="" method="get">';
-                $rows .= '<input type="submit" value="Editar">';
+                //$rows .= '<input type="submit" value="Editar">';
                 $rows .= '</form>';
                 $rows .= '   </td>';
-
-
                 $rows .= '   <td>' . $tareas ->get('prioridad')->get('nombre') . '</td>';
                 $rows .= '   <td>' . $tareas ->get('created_at') . '</td>';
                 $rows .= '   <td>' . $tareas ->get('updated_at') . '</td>';
@@ -62,7 +60,7 @@ class TareasViews
                 $rows .= '     <a href=".php?cod=' . $id . '">Reasignar responsable</a>';
                 $rows .= '   </td>';
                 $rows .= '   <td>';
-                $rows .= '     <a href=".php?cod=' . $id . '">Estado</a>';
+               //$rows .= '     <a href=".php?cod=' . $id . '">Estado</a>';
                 $rows .= '   </td>';
                 $rows .= '</tr>';
             }
@@ -79,9 +77,9 @@ class TareasViews
         $table .= '         <th>fechaFinalizacion</th>';
         $table .= '         <th>creadorTarea</th>';
         $table .= '         <th>observaciones</th>';
-        $table .= '         <th>idEmpleado</th>';
-        $table .= '         <th>idEstado</th>';
-        $table .= '         <th>idPrioridad</th>';
+        $table .= '         <th>Empleado</th>';
+        $table .= '         <th></th>';
+        $table .= '         <th>Prioridad</th>';
         $table .= '         <th>created_at </th>';
         $table .= '         <th>updated_at</th>';
         $rows .= '      <th><a href="formulariosTareas.php">Crear</a></th>';
