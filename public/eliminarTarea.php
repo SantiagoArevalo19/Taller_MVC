@@ -1,6 +1,6 @@
 <?php
 require '../controllers/tareascontroller.php';
-require '../models/db/tareas_db.php';
+require '../models/db/tareasDb.php';
 require '../models/entities/tarea.php';
 require '../models/queries/tareasQueries.php';
 require '../views/tareasView.php';
