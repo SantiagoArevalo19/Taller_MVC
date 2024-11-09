@@ -1,0 +1,78 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+/* Sección de contenido */
+section {
+    width: 100%; /* Usa el ancho completo de la pantalla */
+    max-width: 100%; /* Elimina cualquier límite en el ancho */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tabla de tareas */
+table {
+    width: 100%; /* Usa el ancho completo del contenedor */
+    border-collapse: collapse;
+    font-size: 1rem;
+    table-layout: fixed; /* Distribuye las columnas uniformemente */
+    word-wrap: break-word; /* Ajusta el contenido de las celdas */
+}
+
+table thead {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
