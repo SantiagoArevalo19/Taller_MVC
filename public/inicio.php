@@ -72,9 +72,6 @@ $tareasView = new TareasViews();
                 <label for="fechaFinalizacion">Fecha de fin</label>
                 <input type="date" name="fechaFinalizacion" id="fechaFinalizacion">
             </div>
-     
-
-        <!-- Botón para filtrar -->
         <div>
             <button type="submit" id="btnFiltrar">Filtrar</button>
         </div>
