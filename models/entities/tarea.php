@@ -121,5 +121,22 @@ class Tarea {
         $db->close();
         return $result;
     }
+    function updateEstado() 
+    {
+        $sql = TareasQueries::updateEstado($this);
+        $db = new TareasDb();
+        $result = $db->query($sql);
+        $db->close();
+        return $result;
+    }
+
+    function updateEmpleado(){
+        $sql = TareasQueries::updateEmpleado($this);
+        $db = new TareasDb();
+        $result = $db->query($sql);
+        $db->close();
+        return $result;
+    }
+    
 }
 ?>

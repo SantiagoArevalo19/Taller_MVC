@@ -9,8 +9,12 @@ use App\controllers\EstadoController;
 
 class EstadosViews
 {
-    public function getSelect() {
+    function getSelect($a=false)
+    {
         $select = '<select name="estado">';
+        if($a){
+            $select .= '<option value="">Seleccione una opción</option>';
+        }
         $estadoController = new EstadoController();
         $estados = $estadoController->estado();
         

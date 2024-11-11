@@ -4,10 +4,12 @@ use App\models\entities\Tarea;
 use date;
 
 class TareasController {
-    
+
+
     function getAllTareas($filtro) {
         return Tarea::all();
     }
+    
     function saveTarea($datos) {
         $tarea = new Tarea();
         $tarea->set('titulo', $datos['titulo']);
@@ -46,6 +48,18 @@ class TareasController {
         $tarea = new Tarea();
         $tarea->set('id', $id);
         return $tarea->delete();
+    }
+    function updateEstado($datos) {
+        $tarea = new Tarea();
+        $tarea->set('id', $datos['id']);
+        $tarea->set('idEstado', $datos['idEstado']);
+        return $tarea->updateEstado();
+    }
+    function updateEmpleado($datos) {
+        $tarea = new Tarea();
+        $tarea->set('id', $datos['id']);
+        $tarea->set('idEmpleado', $datos['idEmpleado']);
+        return $tarea->updateEmpleado();
     }
 }
 ?>
