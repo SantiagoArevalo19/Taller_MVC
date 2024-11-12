@@ -1,0 +1,199 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    box-sizing: border-box;
+}
+
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+h1, h2 {
+    font-size: 28px;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+form {
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.campoFormulario {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label.textoEjem {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+select, input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #3498db;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+    transform: scale(1);
+}
+
+/* Estilo para los mensajes  xdd*/
+.msgExito {
+    color: #27ae60;
+    font-weight: bold;
+    text-align: center;
+}
+
+.msgError {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+}
+
+.msgInfo {
+    color: #f39c12;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+
+h2 {
+    margin-top: 20px;
+    color: #34495e;
+}
+
+section > p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+#formEstado, #formEmpleado {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#selectEstado, #selectEmpleado {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Animacionesss */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="date"], select {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="date"], select {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

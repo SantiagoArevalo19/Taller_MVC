@@ -33,13 +33,26 @@ $tareasView = new TareasViews();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas de Empleados</title>
     <link rel="stylesheet" href="css/inicio.css">
+    <title>Lista de Tareas de Empleados</title>
+    
 </head>
 
 <body>
   
+    <header>
+        <h1>Tareas De Los Empleados</h1>
+    </header>
+</section>
     <section>
+    <form action="#" method="get">  
+    </form>
+    <br>
+    <?php echo $tareasView->getTable($_GET); ?>
+    <br>
+</section>
+
+<section>
     <form action="#" method="get" id="formTareas">
         <h2>Filtrar tareas</h2>
         <div>
@@ -76,17 +89,6 @@ $tareasView = new TareasViews();
             <button type="submit" id="btnFiltrar">Filtrar</button>
         </div>
     </form>
-    <header>
-        <h1>Tareas De Los Empleados</h1>
-    </header>
-</section>
-    <section>
-    <form action="#" method="get">  
-    </form>
-    <br>
-    <?php echo $tareasView->getTable($_GET); ?>
-    <br>
-</section>
 </body>
 
 </html>

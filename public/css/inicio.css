@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body */
+
 body {
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ body {
     color: #333;
 }
 
-/* Encabezado */
+
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -28,26 +28,26 @@ header h1 {
     color: #2c3e50;
 }
 
-/* Sección de contenido */
+
 section {
-    width: 100%; /* Usa el ancho completo de la pantalla */
-    max-width: 100%; /* Elimina cualquier límite en el ancho */
+    width: 100%;
+    max-width: 100%;
     background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Tabla de tareas */
+/*  aqui va La Tabla de tareas */
 table {
-    width: 100%; /* Usa el ancho completo del contenedor */
+    width: 100%;
     border-collapse: collapse;
     font-size: 1rem;
-    table-layout: fixed; /* Distribuye las columnas uniformemente */
-    word-wrap: break-word; /* Ajusta el contenido de las celdas */
+    table-layout: fixed;
+    word-wrap: break-word;
 }
 
 table thead {
-    background-color: #3498db;
+    background-color: #5d7ea0;
     color: #ffffff;
 }
 
@@ -61,7 +61,205 @@ table tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Media queries para pantallas pequeñas */
+
+a:link, a:visited {
+    background-color: #5d7ea0;
+    color: #fff;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #ffbf47;
+    color: #333;
+    font-size: 16px;
+}
+
+
+#crearTarea:hover {
+    background-color: #32c771;
+    color: #f9f9f9;
+    font-size: 18px;
+}
+
+/* Eliminar */
+#eliminarTarea:hover {
+    background-color: #e94a47;
+    color: #f9f9f9;
+    font-size: 16px;
+}
+
+/* Modificar xd  */
+#modificarTarea:hover {
+    background-color: #4287f5;
+    color: #f9f9f9;
+    font-size: 16px;
+}
+
+/* Tabla */
+.tablaTareas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 1rem;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.tablaTareas thead {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.tablaTareas th, .tablaTareas td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.tablaTareas tr:nth-child(odd) {
+    background-color: #f3f6f9;
+}
+
+.tablaTareas tr:nth-child(even) {
+    background-color: #e8eef5;
+}
+
+.tablaTareas tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tablaTareas th {
+    background-color: #5d7ea0;
+    color: #fff;
+}
+
+
+.tablaTareas .btnTabla {
+    padding: 8px 16px;
+    background-color: #5d7ea0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 5px;
+}
+
+.tablaTareas .btnTabla:hover {
+    background-color: #59caf5;
+    color: #222;
+}
+
+#formTareas {
+    font-family: Arial, sans-serif;
+    width: 45%;
+    margin: 25px;
+    padding: 18px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    float: left;
+}
+
+.tituloFormulario {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.fieldsetFormulario {
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.legendFormulario {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.campoFormulario {
+    margin-bottom: 10px;
+}
+
+
+.inputFecha, .inputTexto, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.inputFecha:focus, .inputTexto:focus, select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #eef6fc;
+}
+
+/*  aqui van los botones para el Formulario  xdd*/
+.botonFormulario {
+    text-align: center;
+}
+
+.btnFormulario {
+    padding: 8px 16px;
+    background-color: #5d7ea0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btnFormulario:hover {
+    background-color: #59caf5;
+    color: #222;
+}
+
+
+.estado {
+    font-size: 24px;
+    text-align: center;
+}
+
+#tituloResultado {
+    font-size: 26px;
+    color: #29a329;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.msgExito {
+    color: #29a329;
+    text-align: center;
+    font-size: 22px;
+}
+
+.msgError {
+    color: #d93636;
+    text-align: center;
+    font-size: 18px;
+}
+
+.botonInicio {
+    margin: 40px;
+}
+
+h2 {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;

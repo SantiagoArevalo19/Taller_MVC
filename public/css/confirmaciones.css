@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1.estado {
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensajes y abajo puede ir lo del color  */
+.msgExito, .msgError, .msgInfo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.msgExito {
+    color: #27ae60;
+}
+
+.msgError {
+    color: #e74c3c;
+}
+
+.msgInfo {
+    color: #f39c12;
+}
+
+
+a.botonInicio {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+a.botonInicio:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+a.botonInicio:active {
+    transform: scale(1);
+}
+
+
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1.estado {
+        font-size: 24px;
+    }
+
+    a.botonInicio {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 10px;
+    }
+
+    h1.estado {
+        font-size: 20px;
+    }
+
+    a.botonInicio {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
